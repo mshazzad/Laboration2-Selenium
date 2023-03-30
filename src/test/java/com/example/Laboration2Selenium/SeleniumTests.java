@@ -127,7 +127,7 @@ public class SeleniumTests {
     @Test
     void CheckSearchFilm_ClassName()   //Test7: Använd sök förmular och hitta söktexter, kontrollera om det hittats
     {
-        WebElement programSearch = BaseClass.driver.findElement(By.className("sc-8961da81-13"));
+        WebElement programSearch = BaseClass.driver.findElement(By.cssSelector("input.sc-13b24589-0"));  //className("sc-8961da81-13"));
 
         programSearch.sendKeys("Filmer");
         programSearch.sendKeys(Keys.ENTER);
@@ -199,7 +199,7 @@ public class SeleniumTests {
 }
 @Test
 void CheckSearchText(){  // Test12: Kontrollera att sök text visas i sök resulatet
-    WebElement programSearch = BaseClass.driver.findElement(By.className("sc-8961da81-13"));
+    WebElement programSearch = BaseClass.driver.findElement(By.cssSelector("input.sc-13b24589-0"));
 
     programSearch.sendKeys("Agenda");
     programSearch.sendKeys(Keys.ENTER);
